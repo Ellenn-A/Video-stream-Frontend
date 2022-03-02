@@ -1,38 +1,64 @@
+*{
+  margin: 0;
+  padding:0;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  
+}
 .App {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* styling header  */
+h1{
+  padding-bottom: 1em;
+  color: rgb(95, 177, 224);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.header-area{
+  background-color: rgba(0, 0, 0, 0.842);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* styling button containers  */
+.button-container{
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  flex-direction: row;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  padding: 1EM;
+}
+.video-button{
+  margin: 5px;
+  padding: 0.5em;
+  font-size: medium;
+  border-radius: 2px;
+  border: none;
+  background-color:rgb(95, 177, 224) ;
+  color:rgb(28, 30, 32)
+}
+.buttons-area{
+  background-color: rgba(0, 0, 0, 0.842);
+  border-top: 2px solid rgb(107, 113, 116);
+  border-bottom: 2px solid rgb(107, 113, 116);
 }
 
-.App-link {
-  color: #61dafb;
+.buttons-area:hover{
+  border-top: 2px solid lightblue;
+  border-bottom: 2px solid lightblue ;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.video-button:hover{
+  background-color: rgb(55, 65, 75);
+  color: rgb(95, 177, 224);
+}
+
+.video-container{
+  width: 70%;
+}
+@media (max-width: 600px){
+  .video-container{
+    width: 97%;
   }
-  to {
-    transform: rotate(360deg);
-  }
+}
+.video-area{
+  background-color: rgba(0, 0, 0, 0.842);
+  padding:1em;
 }

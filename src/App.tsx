@@ -1,25 +1,35 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { useState } from 'react';
+import { QueryClient, QueryClientProvider } from 'react-query';
+
 import './App.css';
+import { DifferentVideosButtons } from './components/differentVids';
+import { Footer } from './components/footer';
+import { HeaderComponent } from './components/header';
+import { VideoBox } from './components/videoBox';
+
+const queryClient = new QueryClient();
+
+
+
 
 function App() {
+  const [currentVid, setCurrentVid] = useState<string>('bunny');
+
   return (
+    <QueryClientProvider client={queryClient}>
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className="header-area">
+        <HeaderComponent/>
+      </div>
+      <div className="buttons-area">
+        <DifferentVideosButtons currentVid={currentVid} setCurrentVid={setCurrentVid}/>
+      </div>
+      <div className="video-area">
+        <VideoBox vidName={currentVid} />
+      </div>
+      <Footer projectName={currentVid}/>
     </div>
+    </QueryClientProvider>
   );
 }
 
