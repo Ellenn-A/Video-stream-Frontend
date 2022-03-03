@@ -62,3 +62,16 @@ h1{
   background-color: rgba(0, 0, 0, 0.842);
   padding:1em;
 }
+
+
+/* FOOTER STYLING */
+h2{
+  padding:1em 0;
+}
+.footer-area{
+  background-color: rgba(0, 0, 0, 0.842);
+  padding:3em;
+  color: rgb(95, 177, 224);
+  border: none;
+  text-align: left;
+}
